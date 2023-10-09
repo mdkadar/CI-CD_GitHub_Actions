@@ -1,13 +1,13 @@
 name: 'Deploy to AWS CloudFormation'
 
 on: 
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
-  #workflow_dispatch:
+  workflow_dispatch:
   #  inputs:
   #    region:
   #      description: 'AWS Region to deploy to'
@@ -41,5 +41,5 @@ jobs:
           name: tekloon-test-stack
           template: test-stack.yaml
           no-fail-on-empty-changeset: "1"
-          parameter-overrides: "EC2InstanceType=t2.micro"
+          #parameter-overrides: "EC2InstanceType=t2.micro"
   
